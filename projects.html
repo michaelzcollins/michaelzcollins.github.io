@@ -1,8 +1,59 @@
-<section id="projects">
-    <h2>Projects</h2>
-    <ul>
-        <li><a href="projects.html">Project 1</a></li>
-        <li><a href="projects.html">Project 2</a></li>
-        <li><a href="projects.html">Project 3</a></li>
-    </ul>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .project {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .project h2 {
+            color: #444;
+        }
+        .project p {
+            font-size: 1.1em;
+            color: #666;
+        }
+        video {
+            width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Projects</h1>
+        
+        <!-- Project 1 -->
+        <div class="project">
+            <h2>LIVE SQL INJECTION AND PATCH</h2>
+            <p>This project demonstrates a live SQL Injection vulnerability and the corresponding patch applied to fix it.</p>
+            
+            <!-- Video Embed -->
+            <video controls>
+                <source src="https://raw.githubusercontent.com/michaelzcollins/michaelzcollins.github.io/main/bootcon.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</body>
+</html>
