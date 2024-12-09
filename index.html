@@ -34,26 +34,27 @@
             margin: 20px;
         }
 
-        .floating-object {
+       .floating-object {
     position: absolute;
     bottom: 0;
     font-size: 20px;
-    animation: bounce 5s ease-in-out infinite;
-    color: #007BFF; /* Choose your preferred color */
+    animation: bounce-back 5s ease-in-out infinite;
+    color: #007BFF; /* Customize the color */
 }
 
-@keyframes bounce {
+@keyframes bounce-back {
     0% {
         left: -100px; /* Start off-screen to the left */
     }
     50% {
         left: 50%; /* Move to the center */
-        transform: translateX(-50%); /* Center it perfectly */
+        transform: translateX(-50%); /* Center the element horizontally */
     }
     100% {
         left: 100%; /* Move off-screen to the right */
     }
 }
+
 }
 
     
