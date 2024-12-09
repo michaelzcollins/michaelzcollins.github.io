@@ -7,17 +7,26 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
         .container {
             width: 80%;
-            margin: 0 auto;
+            margin: 20px auto;
         }
-        h1 {
+        h1, h2 {
             text-align: center;
             color: #333;
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            margin-top: 40px;
+        }
+        p {
+            font-size: 1.1em;
+            color: #666;
+            text-align: center;
         }
         .project {
             background-color: white;
@@ -25,21 +34,25 @@
             margin: 20px 0;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .project h2 {
-            color: #444;
-        }
-        .project p {
-            font-size: 1.1em;
-            color: #666;
+            text-align: center;
         }
         video {
             width: 100%;
             border-radius: 8px;
         }
+        /* Home link styling */
+        .home-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
+    <!-- Home Link -->
+    <a href="index.html" class="home-link">Home</a>
+
     <div class="container">
         <h1>Projects</h1>
         
@@ -55,12 +68,12 @@
             </video>
         </div>
 
-<h2>Network Penatration Test</h2>
-<p>This project demonstrated a detailed pentest in a controlled enviroment.</p>
-    <a href="https://docs.google.com/document/d/1pvl73KWicHZBaDR3pxaNbU1IFSCq3n7fboBt0LU2d-k/edit?usp=sharing">View Project</a>
-
-
-        
+        <!-- Project 2 -->
+        <div class="project">
+            <h2>Network Penetration Test</h2>
+            <p>This project demonstrated a detailed pentest in a controlled environment.</p>
+            <a href="https://docs.google.com/document/d/1pvl73KWicHZBaDR3pxaNbU1IFSCq3n7fboBt0LU2d-k/edit?usp=sharing" target="_blank">View Project Documentation</a>
+        </div>
     </div>
 </body>
 </html>
