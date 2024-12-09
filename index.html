@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Cybersecurity Portfolio</title>
+    <title>Michael Collins - Cybersecurity Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -33,13 +33,39 @@
         section {
             margin: 20px;
         }
+  
+    .floating-object {
+    position: absolute;
+    bottom: 0;
+    font-size: 20px; /* Adjust as needed */
+    animation: float 5s linear infinite;
+    color: #007BFF; /* Choose your preferred color */
+}
+
+@keyframes float {
+    0% {
+        left: -100px;
+        opacity: 1;
+    }
+    50% {
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.5;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+    
     </style>
 </head>
 <body>
 
 <header>
     <h1>Your Name</h1>
-    <p>Cybersecurity Professional | Passionate about protecting data and systems</p>
+    <p>Cybersecurity Professional | Constantly learning and growing </p>
 </header>
 
 <nav>
@@ -49,7 +75,8 @@
     <a href="articles.html">Articles</a>
 </nav>
 
-    
+    <div class="floating-object">🌟 Floating Animation 🌟</div>
+
 
 </body>
 </html>
