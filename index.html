@@ -61,34 +61,32 @@
 
         .star {
             position: absolute;
-            top: var(--top-offset);
-            left: 0;
-            width: var(--star-tail-length);
-            height: var(--star-tail-height);
-            color: var(--star-color, #ffffff);
-            background: linear-gradient(45deg, currentColor, transparent);
+            width: 2px;
+            height: 2px;
+            background-color: white;
             border-radius: 50%;
-            filter: drop-shadow(0 0 6px currentColor);
-            animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+            opacity: 0.8;
+            animation: fall 5s linear infinite, tail-fade 2s ease-out infinite;
         }
 
+        /* Star Falling Animation */
         @keyframes fall {
-            to {
-                transform: translate3d(-30em, 0, 0);
-            }
-        }
-
-        @keyframes tail-fade {
-            0%, 50% {
-                width: var(--star-tail-length);
+            0% {
+                transform: translateY(0);
                 opacity: 1;
             }
-
-            70%, 80% {
-                width: 0;
-                opacity: 0.4;
+            100% {
+                transform: translateY(100vh); /* Moves the stars downward */
+                opacity: 0;
             }
+        }
 
+        /* Tail Fade Animation */
+        @keyframes tail-fade {
+            0%, 50% {
+                width: 2px;
+                opacity: 1;
+            }
             100% {
                 width: 0;
                 opacity: 0;
@@ -98,7 +96,7 @@
         /* Ensuring responsive stars */
         @media screen and (max-width: 750px) {
             .star {
-                animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
+                animation: fall 5s linear infinite;
             }
         }
     </style>
@@ -119,41 +117,21 @@
 
     <!-- Starry Background -->
     <div class="stars">
-        <!-- Add 50 stars here -->
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
+        <!-- Add 50 stars with random animation times and positions -->
+        <div class="star" style="top: 10%; left: 10%; animation-duration: 3s;"></div>
+        <div class="star" style="top: 20%; left: 40%; animation-duration: 4s;"></div>
+        <div class="star" style="top: 30%; left: 60%; animation-duration: 5s;"></div>
+        <div class="star" style="top: 50%; left: 80%; animation-duration: 2s;"></div>
+        <div class="star" style="top: 70%; left: 90%; animation-duration: 3s;"></div>
+        <div class="star" style="top: 40%; left: 20%; animation-duration: 4s;"></div>
+        <div class="star" style="top: 60%; left: 50%; animation-duration: 5s;"></div>
+        <div class="star" style="top: 80%; left: 30%; animation-duration: 6s;"></div>
+        <div class="star" style="top: 20%; left: 80%; animation-duration: 3s;"></div>
+        <div class="star" style="top: 10%; left: 70%; animation-duration: 4s;"></div>
+        <!-- Add more stars if you want -->
     </div>
 
 </body>
 </html>
 
-
-
-</body>
-</html>
 
