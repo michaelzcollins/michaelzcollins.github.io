@@ -5,33 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Collins - Cybersecurity Portfolio</title>
     <style>
-        /* General Body and Layout Styling */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
-            overflow: hidden;
-            position: relative; /* Necessary for positioning the stars */
         }
-
-        /* Header Styling */
         header {
             background-color: #333;
             color: #fff;
             padding: 1rem;
             text-align: center;
-            position: relative; /* To ensure it appears above the stars */
-            z-index: 10; /* Makes sure the header appears above the stars */
         }
-
-        /* Navigation Styling */
         nav {
             text-align: center;
             margin-top: 20px;
-            position: relative;
-            z-index: 10;
         }
         nav a {
             margin: 0 15px;
@@ -42,98 +30,33 @@
         nav a:hover {
             color: #007bff;
         }
-
-        /* Starry Background */
-        .stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 120%;
-            transform: rotate(-45deg);
-            pointer-events: none; /* Prevents stars from interfering with user interactions */
-            z-index: 0; /* Ensures stars are below content */
+        section {
+            margin: 20px;
         }
 
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background-color: white;
-            border-radius: 50%;
-            opacity: 0.8;
-            animation: fall 5s linear infinite, tail-fade 2s ease-out infinite;
-        }
 
-        /* Star Falling Animation */
-        @keyframes fall {
-            0% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh); /* Moves the stars downward */
-                opacity: 0;
-            }
-        }
 
-        /* Tail Fade Animation */
-        @keyframes tail-fade {
-            0%, 50% {
-                width: 2px;
-                opacity: 1;
-            }
-            100% {
-                width: 0;
-                opacity: 0;
-            }
-        }
 
-        /* Ensuring responsive stars */
-        @media screen and (max-width: 750px) {
-            .star {
-                animation: fall 5s linear infinite;
-            }
-        }
 
-        /* Centering content (header, nav) */
-        .content {
-            position: relative;
-            z-index: 10; /* Ensures it stays above the stars */
-        }
+    
     </style>
 </head>
 <body>
 
-    <div class="content">
-        <header>
-            <h1>Michael Collins</h1>
-            <p>Cybersecurity Professional | Constantly learning and growing</p>
-        </header>
+<header>
+    <h1>Michael Collins</h1>
+    <p>Cybersecurity Professional | Constantly learning and growing </p>
+</header>
 
-        <nav>
-            <a href="projects.html">Projects</a>
-            <a href="certifications.html">Certifications</a>
-            <a href="codes.html">Code Samples</a>
-            <a href="articles.html">Articles</a>
-        </nav>
-    </div>
+<nav>
+    <a href="projects.html">Projects</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="codes.html">Code Samples</a>
+    <a href="articles.html">Articles</a>
+</nav>
 
-    <!-- Starry Background -->
-    <div class="stars">
-        <!-- Add 50 stars with random animation times and positions -->
-        <div class="star" style="top: 10%; left: 10%; animation-duration: 3s;"></div>
-        <div class="star" style="top: 20%; left: 40%; animation-duration: 4s;"></div>
-        <div class="star" style="top: 30%; left: 60%; animation-duration: 5s;"></div>
-        <div class="star" style="top: 50%; left: 80%; animation-duration: 2s;"></div>
-        <div class="star" style="top: 70%; left: 90%; animation-duration: 3s;"></div>
-        <div class="star" style="top: 40%; left: 20%; animation-duration: 4s;"></div>
-        <div class="star" style="top: 60%; left: 50%; animation-duration: 5s;"></div>
-        <div class="star" style="top: 80%; left: 30%; animation-duration: 6s;"></div>
-        <div class="star" style="top: 20%; left: 80%; animation-duration: 3s;"></div>
-        <div class="star" style="top: 10%; left: 70%; animation-duration: 4s;"></div>
-        <!-- Add more stars if you want -->
-    </div>
+ 
+
 
 </body>
 </html>
