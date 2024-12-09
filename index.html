@@ -33,29 +33,27 @@
         section {
             margin: 20px;
         }
-  
-    .floating-object {
+
+        .floating-object {
     position: absolute;
     bottom: 0;
-    font-size: 20px; /* Adjust as needed */
-    animation: float 5s linear infinite;
+    font-size: 20px;
+    animation: bounce 5s ease-in-out infinite;
     color: #007BFF; /* Choose your preferred color */
 }
 
-@keyframes float {
+@keyframes bounce {
     0% {
-        left: -100px;
-        opacity: 1;
+        left: -100px; /* Start off-screen to the left */
     }
     50% {
-        left: 50%;
-        transform: translateX(-50%);
-        opacity: 0.5;
+        left: 50%; /* Move to the center */
+        transform: translateX(-50%); /* Center it perfectly */
     }
     100% {
-        left: 100%;
-        opacity: 0;
+        left: 100%; /* Move off-screen to the right */
     }
+}
 }
 
     
