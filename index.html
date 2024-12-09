@@ -11,10 +11,6 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
             background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
             overflow: hidden;
             position: relative; /* Necessary for positioning the stars */
@@ -99,21 +95,29 @@
                 animation: fall 5s linear infinite;
             }
         }
+
+        /* Centering content (header, nav) */
+        .content {
+            position: relative;
+            z-index: 10; /* Ensures it stays above the stars */
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Michael Collins</h1>
-        <p>Cybersecurity Professional | Constantly learning and growing</p>
-    </header>
+    <div class="content">
+        <header>
+            <h1>Michael Collins</h1>
+            <p>Cybersecurity Professional | Constantly learning and growing</p>
+        </header>
 
-    <nav>
-        <a href="projects.html">Projects</a>
-        <a href="certifications.html">Certifications</a>
-        <a href="codes.html">Code Samples</a>
-        <a href="articles.html">Articles</a>
-    </nav>
+        <nav>
+            <a href="projects.html">Projects</a>
+            <a href="certifications.html">Certifications</a>
+            <a href="codes.html">Code Samples</a>
+            <a href="articles.html">Articles</a>
+        </nav>
+    </div>
 
     <!-- Starry Background -->
     <div class="stars">
