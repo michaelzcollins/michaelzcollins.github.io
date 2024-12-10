@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Demonstrations - Malware Checker</title>
+    <title>Code Demonstrations</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -36,10 +36,6 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-        video {
-            width: 100%;
-            border-radius: 8px;
-        }
         /* Home link styling */
         .home-link {
             position: absolute;
@@ -48,45 +44,6 @@
             font-size: 14px;
             text-decoration: underline;
         }
-        /* Styling for result */
-        .result {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-            max-width: 80%;
-            margin: 20px auto;
-        }
-        input {
-            padding: 10px;
-            font-size: 16px;
-            width: 300px;
-            margin: 10px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        /* Styling for displaying the code */
-        .code-display {
-            margin-top: 30px;
-            text-align: left;
-            font-family: monospace;
-            white-space: pre-wrap;
-            background-color: #f0f0f0;
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 80%;
-            margin: 20px auto;
-            font-size: 14px;
-        }
     </style>
 </head>
 <body>
@@ -94,68 +51,22 @@
     <div class="container">
         <h1>Code Demonstrations</h1>
 
-        <!-- Malware Checker Demo Section -->
+        <!-- Link to Malware Checker Demo -->
         <div class="project">
             <h2>Malware Hash Checker</h2>
-            <p>Use this tool to check if a file hash is safe or malicious based on VirusTotal's analysis.</p>
-            <input type="text" id="fileHash" placeholder="Enter File Hash (MD5, SHA1, SHA256)">
-            <button onclick="checkHash()">Check Hash</button>
-            <div class="result" id="result">Enter a hash to get started.</div>
+            <p>Check if a file hash is safe or malicious using the VirusTotal API. Click below to try the demo.</p>
+            <a href="checker.html" class="linkedin-link" target="_blank">Try the Malware Hash Checker Demo</a>
         </div>
 
-        <!-- Displaying the JavaScript Code -->
-        <div class="code-display">
-            <h3>JavaScript Code for Malware Checker</h3>
-            <pre><code>
-// Define the API key and base URL for VirusTotal
-const apiKey = 'YOUR_API_KEY_HERE'; // Replace with your VirusTotal API key
-const apiUrl = 'https://www.virustotal.com/api/v3/files/';
-
-// Function to check hash via VirusTotal API
-function checkHash() {
-    const hash = document.getElementById('fileHash').value.trim(); // Get hash from input field
-    if (hash === '') {
-        alert('Please enter a valid file hash.');
-        return;
-    }
-    const resultDiv = document.getElementById('result');
-    resultDiv.textContent = 'Checking...';
-
-    // Fetch the analysis from VirusTotal
-    fetch(\`\${apiUrl}\${hash}\`, {
-        method: 'GET',
-        headers: {
-            'x-apikey': apiKey // Use your API key for authentication
-        }
-    })
-    .then(response => response.json()) // Parse the response as JSON
-    .then(data => {
-        if (data.data) {
-            const maliciousCount = data.data.attributes.last_analysis_stats.malicious;
-            if (maliciousCount > 0) {
-                resultDiv.textContent = 'The file hash is **malicious**!';
-                resultDiv.style.backgroundColor = '#ff6666';
-            } else {
-                resultDiv.textContent = 'The file hash is **safe**.';
-                resultDiv.style.backgroundColor = '#66ff66';
-            }
-        } else {
-            resultDiv.textContent = 'Unable to fetch data. Please check the hash.';
-            resultDiv.style.backgroundColor = '#f0f0f0';
-        }
-    })
-    .catch(error => {
-        resultDiv.textContent = 'An error occurred: ' + error;
-        resultDiv.style.backgroundColor = '#f0f0f0';
-    });
-}
-            </code></pre>
+        <!-- Add other code demos as you write them -->
+        <!-- Example Link to New Demo -->
+        <div class="project">
+            <h2>Example Code Demo #2</h2>
+            <p>Short description of your second demo.</p>
+            <a href="example2.html" class="linkedin-link" target="_blank">Try Demo #2</a>
         </div>
+        
+        <!-- Add more demos as needed -->
     </div>
-
-    <script>
-        // You can include your script in this section or link to an external JS file.
-        // Place your checkHash() function here if it's not linked externally.
-    </script>
 </body>
 </html>
