@@ -3,54 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certifications</title>
+    <title>Certificates</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
         .container {
-            margin-top: 50px;
+            width: 80%;
+            margin: 20px auto;
         }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-top: 40px;
+        }
+        p {
+            font-size: 1.1em;
+            color: #666;
+            text-align: center;
+        }
+        .project {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        video {
+            width: 100%;
+            border-radius: 8px;
+        }
+        /* Home link styling */
         .home-link {
             position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 18px;
+            top: 20px;
+            left: 20px;
+            font-size: 14px;
+            text-decoration: underline;
         }
-        .content {
-            margin: 20px;
-        }
-        .certifications-text {
-            font-size: 24px;
-            margin: 20px 0;
-        }
-        .linkedin-link, .home-link {
+        /* Link styling */
+        .linkedin-link {
             font-size: 18px;
             color: blue;
-            text-decoration: underline; /* Ensures the links are underlined */
-        }
-        .in-the-works {
-            font-size: 22px;
-            margin: 30px 0;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <a href="index.html" class="home-link">Home</a>
     <div class="container">
-        <div class="content">
-            <div class="certifications-text">
-                <p>All of my certificates are displayed on my <a href="https://www.linkedin.com" class="linkedin-link" target="_blank">LinkedIn</a></p>
-            </div>
-            <div class="in-the-works">
-                <h2>In the works...</h2>
-                <p>Here you can describe what certification you are working on next.</p>
-            </div>
+        <h1>Certificates</h1>
+        <div class="project">
+            <p>All of my certificates are displayed on my <a href="https://www.linkedin.com" class="linkedin-link" target="_blank">LinkedIn</a></p>
+        </div>
+        <div class="project">
+            <h2>In the works...</h2>
+            <p>Here you can describe what certification you are working on next.</p>
         </div>
     </div>
 </body>
 </html>
+
 
