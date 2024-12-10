@@ -142,51 +142,23 @@
 
         <!-- Displaying the JavaScript Code -->
         <div class="project">
-            <h3>JavaScript Code for Malware Checker</h3>
-            <pre><code>
-// Define the API key and base URL for VirusTotal
-const apiKey = 'YOUR_API_KEY_HERE'; // Replace with your VirusTotal API key
-const apiUrl = 'https://www.virustotal.com/api/v3/files/';
+            <h3><a href="https://github.com/michaelzcollins/malewarechecker/blob/main/rawcode" target="_blank">JavaScript Code for Malware Checker</a></h3>
+            <p>This tool allows users to check whether a file hash (MD5, SHA1, or SHA256) is malicious or safe by querying the VirusTotal API.
 
-// Function to check hash via VirusTotal API
-function checkHash() {
-    const hash = document.getElementById('fileHash').value.trim(); // Get hash from input field
-    if (hash === '') {
-        alert('Please enter a valid file hash.');
-        return;
-    }
-    const resultDiv = document.getElementById('result');
-    resultDiv.textContent = 'Checking...';
+How It Works:
+User Input: The user enters a file hash in the input field.
+API Request: The JavaScript script sends the hash to the VirusTotal API using the fetch() function.
+Result Display:
+If the file is malicious, the result section shows "The file hash is malicious!" with a red background.
+If the file is safe, it shows "The file hash is safe" with a green background.
+Error Handling: If there’s an issue (e.g., hash not found or network error), an appropriate error message is displayed.
+GitHub Link: A button links to the GitHub repository where the source code is hosted.
+Why It’s Useful:
+This tool demonstrates using VirusTotal for malware analysis, a key task for SOC analysts.
+It automates the process of checking file hashes, which is essential for identifying threats in a security operations center.
 
-    // Fetch the analysis from VirusTotal
-    fetch(\`\${apiUrl}\${hash}\`, {
-        method: 'GET',
-        headers: {
-            'x-apikey': apiKey // Use your API key for authentication
-        }
-    })
-    .then(response => response.json()) // Parse the response as JSON
-    .then(data => {
-        if (data.data) {
-            const maliciousCount = data.data.attributes.last_analysis_stats.malicious;
-            if (maliciousCount > 0) {
-                resultDiv.textContent = 'The file hash is **malicious**!';
-                resultDiv.style.backgroundColor = '#ff6666';
-            } else {
-                resultDiv.textContent = 'The file hash is **safe**.';
-                resultDiv.style.backgroundColor = '#66ff66';
-            }
-        } else {
-            resultDiv.textContent = 'Unable to fetch data. Please check the hash.';
-            resultDiv.style.backgroundColor = '#f0f0f0';
-        }
-    })
-    .catch(error => {
-        resultDiv.textContent = 'An error occurred: ' + error;
-        resultDiv.style.backgroundColor = '#f0f0f0';
-    });
-}
-            </code></pre>
+
+</p>
         </div>
 
     </div>
