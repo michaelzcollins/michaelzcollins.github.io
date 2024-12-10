@@ -107,6 +107,7 @@
         <script>
             const apiKey = 'ec30f51ba0c15c7ea9a9cd47ad426d05ee08b29680417f638c97b28adb684912'; // Replace with your VirusTotal API key
             const apiUrl = 'https://www.virustotal.com/api/v3/files/';
+            const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // Temporary CORS proxy
 
             function checkHash() {
                 const hash = document.getElementById('fileHash').value.trim();
@@ -117,7 +118,7 @@
                 const resultDiv = document.getElementById('result');
                 resultDiv.textContent = 'Checking...';
 
-                fetch(`${apiUrl}${hash}`, {
+                fetch(`${proxyUrl}${apiUrl}${hash}`, {
                     method: 'GET',
                     headers: {
                         'x-apikey': apiKey
@@ -140,6 +141,7 @@
                     }
                 })
                 .catch(error => {
+                    console.error('Error fetching data:', error); // Log the error for debugging
                     resultDiv.textContent = 'An error occurred: ' + error;
                     resultDiv.style.backgroundColor = '#f0f0f0';
                 });
@@ -163,3 +165,4 @@
     </div>
 </body>
 </html>
+
